@@ -1,0 +1,384 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+/* Base Styles */
+body {
+  font-family: 'Times New Roman', 'Outfit', serif;
+  background-color: #fff;
+  color: #333;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navbar */
+.navbar {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* Welcome Section */
+.welcome-section h1 {
+  font-family: 'Times New Roman', 'Outfit', serif;
+  font-size: 2.5rem;
+}
+
+.welcome-section p {
+  font-size: 1.15rem;
+  color: #444;
+}
+.welcome-section {
+  /* Gradient background */
+  background: linear-gradient(135deg, #d9e8ff 0%, #a3c1ff 100%);
+  /* Optional subtle texture/pattern overlay using CSS */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 3rem 2rem 6rem; /* more bottom padding */
+   /* optional spacing before footer */
+
+  
+}
+
+/* Optional: subtle diagonal stripes overlay */
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.1) 10px,
+    rgba(255,255,255,0.2) 11px,
+    rgba(255,255,255,0.2) 20px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure text and buttons stay above overlay */
+.welcome-section > * {
+  position: relative;
+  z-index: 1;
+  color: #0d3a99; /* Darker blue for text */
+}
+
+/* Headings */
+h2, h3 {
+  font-family: 'Outfit', sans-serif;
+  color: #0d6efd;
+}
+
+/* Restaurant Cards and Menu */
+section .container h2 {
+  margin-bottom: 2rem;
+}
+
+/* --- Card Styling --- */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #fefefe, #e9f0ff);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(13, 110, 253, 0.25);
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Card Titles */
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.85rem;
+  padding: 0.35em 0.75em;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: box-shadow 0.6s ease-in-out;
+}
+
+.badge.bg-success {
+  background-color: #198754 !important;
+  box-shadow: 0 0 6px 2px #198754aa;
+  animation: pulseGlow 2s infinite;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+/* Pulsing glow animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px 2px #198754aa;
+  }
+  50% {
+    box-shadow: 0 0 12px 6px #198754cc;
+  }
+}
+
+/* Card Footer (price) */
+.card-footer {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #0d6efd;
+  background-color: transparent;
+  border-top: none;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Section Headings */
+h3 {
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid #0d6efd;
+  padding-bottom: 0.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Order Form Styling */
+#order-form {
+  max-width: 600px;
+  margin: 3rem auto 5rem auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+#order-form label {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+#order-form input,
+#order-form select {
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1.5px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+#order-form input:focus,
+#order-form select:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 8px #0d6efd88;
+}
+
+#order-form button {
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  border: none;
+  padding: 0.75rem 2.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  color: #fff;
+  transition: background 0.4s ease;
+}
+
+#order-form button:hover {
+  background: linear-gradient(90deg, #6610f2, #0d6efd);
+  box-shadow: 0 0 12px #6610f2aa;
+  cursor: pointer;
+
+}
+.page-title{
+  font-family: 'Outfit', sans-serif;
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .card-footer {
+    font-size: 1rem;
+  }
+
+  #order-form {
+    padding: 1.5rem 1rem;
+  }
+}
+/* About Section Background */
+section.py-5 {
+  background: linear-gradient(135deg, #e0f0ff, #f9fbff);
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(13, 110, 253, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+section.py-5:hover {
+  box-shadow: 0 12px 50px rgba(13, 110, 253, 0.2);
+}
+
+/* Container Styling */
+.container {
+  max-width: 960px;
+}
+
+/* Paragraph spacing and typography */
+section.py-5 p {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+  color: #2a2a2a;
+  letter-spacing: 0.02em;
+}
+
+/* Heading Styling */
+h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: #0d6efd;
+  text-shadow: 0 2px 5px rgba(13, 110, 253, 0.3);
+  letter-spacing: 0.05em;
+}
+
+/* Image styling */
+.img-fluid {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar styling tweak for sticky effect */
+.navbar {
+  backdrop-filter: saturate(180%) blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+/* Footer social icons hover effect */
+footer a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffd54f;
+  transform: scale(1.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  section.py-5 {
+    padding: 3rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  section.py-5 p {
+    font-size: 1.1rem;
+  }
+
+  .img-fluid:hover {
+    transform: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+.restaurant-img {
+  max-height: 350px;
+  object-fit: cover;
+  width: auto;
+  height: auto;
+}
+.small-img{
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20%;
+  width: 500px;
+
+}
+
+/* Map iframe */
+iframe {
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-bottom: 0.3rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+}
